@@ -23,7 +23,6 @@ html {
 
 body {
 	padding-top: 40px;
-	body
 }
 
 video,#console {
@@ -64,9 +63,7 @@ div#videoSmall {
 	width: 240px;
 	height: 180px;
 	padding: 0px;
-	position: absolute;
-	top: 15px;
-	left: 400px;
+
 	cursor: pointer;
 	z-index: 10;
 	padding: 0px;

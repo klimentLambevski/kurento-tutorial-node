@@ -22,7 +22,7 @@
     <script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
 
     <script src="js/index.js"></script>
-    <title>Kurento Tutorial 3: Video Call 1 to N with WebRTC</title>
+    <title>Kurento Tutorial 3: Video Call N to N with WebRTC</title>
   </head>
   <body>
 
@@ -92,10 +92,10 @@
           <div class="row">
             <div class="col-md-12">
               <a id="call" href="#" class="btn btn-success">
-                <span class="glyphicon glyphicon-play"></span> Presenter</a>
-              <a id="viewer" href="#" class="btn btn-primary">
+                <span class="glyphicon glyphicon-play"></span> Start</a>
+              <a id="viewer" href="#" class="btn btn-primary" style="display: none;">
                 <span class="glyphicon glyphicon-user"></span> Viewer</a>
-              <a id="terminate" href="#" class="btn btn-danger">
+              <a id="terminate" href="#" class="btn btn-danger" style="display: none;">
                 <span class="glyphicon glyphicon-stop"></span> Stop</a>
             </div>
           </div>
@@ -107,7 +107,10 @@
         </div>
         <div class="col-md-7">
           <div id="videoBig">
-            <video id="video" autoplay width="640px" height="480px" poster="img/webrtc.png"></video>
+            <video id="video" autoplay width="640px" height="480px" poster="img/webrtc.png" muted></video>
+          </div>
+          <div id="videoSmall" style="display: flex;">
+
           </div>
         </div>
       </div>

@@ -31,10 +31,16 @@ var argv = minimist(process.argv.slice(2), {
     }
 });
 
+const privateKey = fs.readFileSync(`/home/ubuntu/.certbot/config/live/test.kms.rpturn.com/privkey.pem`, 'utf8');
+const certificate = fs.readFileSync(`/home/ubuntu/.certbot/config/live/test.kms.rpturn.com/cert.pem`, 'utf8');
+const ca = fs.readFileSync(`/home/ubuntu/.certbot/config/live/test.kms.rpturn.com/chain.pem`, 'utf8');
+
+
 var options =
 {
-  key:  fs.readFileSync('keys/server.key'),
-  cert: fs.readFileSync('keys/server.crt')
+	key: privateKey,
+	cert: certificate,
+	ca: ca
 };
 
 var app = express();
